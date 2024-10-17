@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              goyang: 'goyang  1s ease-in-out infinite',
+            },
+            keyframes: {
+              goyang: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Coba Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom CSS for a subtle, wavy line */
+      .wavy-line {
+        position: relative;
+        width: 100%;
+        height: 15px;
+        background: repeating-linear-gradient(90deg, #4a5568 0px, #4a5568 2px, transparent 2px, transparent 8px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container p-2 animate-none">
+      <div class="grid grid-cols-2 gap-2 mb-7">
+        <!-- Kolom Kiri (Lebih Besar) -->
+        <div class="space-y-2">
+          <!-- Foto Besar -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/3.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center cursor-pointer">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 1</h3>
+                <p class="text-sm">Deskripsi Foto 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/3.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 1</h3>
+                <p class="text-sm">Deskripsi Foto 1</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Regular -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/6.jpg" alt="Gallery Image" class="w-[300px] h-full object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 2</h3>
+                <p class="text-sm">Deskripsi Foto 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan (Lebih Kecil) -->
+        <div class="space-y-2">
+          <!-- Foto Regular -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/6.jpg" alt="Gallery Image" class="w-[300px] h-full object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 3</h3>
+                <p class="text-sm">Deskripsi Foto 3</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Regular -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/5.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 4</h3>
+                <p class="text-sm">Deskripsi Foto 4</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/5.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 4</h3>
+                <p class="text-sm">Deskripsi Foto 4</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Regular -->
+          <!-- <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/1.jpg" alt="Gallery Image" class="w-full h-[200px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto</h3>
+                <p class="text-sm">Deskripsi foto</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="wavy-line mb-7"></div>
+
+    <div class="container p-2">
+      <div class="grid grid-cols-2 gap-2">
+        <!-- Kolom Kiri (Lebih Besar) -->
+        <div class="space-y-2">
+          <!-- Foto Besar -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/3.jpg" alt="Gallery Image" class="w-full h-[210px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">o 5</h3>
+                <p class="text-sm">Deskripsi Foto 5</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/3.jpg" alt="Gallery Image" class="w-full h-[210px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 2</h3>
+                <p class="text-sm">Deskripsi Foto 2</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Regular -->
+        </div>
+
+        <!-- Kolom Kanan (Lebih Kecil) -->
+        <div class="space-y-2 mb-7">
+          <!-- Foto Regular -->
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/6.jpg" alt="Gallery Image" class="w-[300px] h-full object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 6</h3>
+                <p class="text-sm">Deskripsi Foto 6</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/6.jpg" alt="Gallery Image" class="w-[300px] h-full object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 7</h3>
+                <p class="text-sm">Deskripsi Foto 7</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/6.jpg" alt="Gallery Image" class="w-[300px] h-full object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto 8</h3>
+                <p class="text-sm">Deskripsi Foto 8</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto Regular -->
+          <!-- <div class="relative overflow-hidden rounded-lg group">
+            <img src="/img/1.jpg" alt="Gallery Image" class="w-full h-[200px] object-cover transition duration-300 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <div class="text-white text-center">
+                <h3 class="text-lg font-semibold">Judul Foto</h3>
+                <p class="text-sm">Deskripsi foto</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="wavy-line"></div>
+  </body>
+</html>
